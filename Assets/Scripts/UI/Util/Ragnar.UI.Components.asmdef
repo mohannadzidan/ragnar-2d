@@ -1,0 +1,16 @@
+{
+    "name": "Ragnar.UI.Components",
+    "rootNamespace": "Ragnar.UI.Compnents",
+    "references": [
+        "GUID:f440286408bd69a43a886ddb730d26de"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

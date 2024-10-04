@@ -1,0 +1,18 @@
+{
+    "name": "Ragnar.AI.NPC",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f440286408bd69a43a886ddb730d26de",
+        "GUID:936cfafc0c03d6c49ad631d0e3bb0620",
+        "GUID:a1e18ea1a0ee18b468332bbec4ec26e6"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

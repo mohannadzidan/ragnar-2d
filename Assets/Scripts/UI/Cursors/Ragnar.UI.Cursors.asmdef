@@ -1,0 +1,17 @@
+{
+    "name": "Ragnar.UI.Cursors",
+    "rootNamespace": "",
+    "references": [
+        "GUID:77320fecf8695fe4586c1c81152b3065",
+        "GUID:f96e4854ab387ca429a35fd5ace44398"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

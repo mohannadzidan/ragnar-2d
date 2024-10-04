@@ -1,0 +1,17 @@
+{
+    "name": "Spawners.Core",
+    "rootNamespace": "",
+    "references": [
+        "GUID:936cfafc0c03d6c49ad631d0e3bb0620",
+        "GUID:f96e4854ab387ca429a35fd5ace44398"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

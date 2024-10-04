@@ -1,0 +1,16 @@
+{
+    "name": "Ragnar.AI.Navigation.Core",
+    "rootNamespace": "",
+    "references": [
+        "GUID:f96e4854ab387ca429a35fd5ace44398"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

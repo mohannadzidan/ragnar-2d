@@ -1,0 +1,19 @@
+{
+    "name": "Ragnar.Items.Inventory",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2395ab16e1401d442b46ac1a668a4444",
+        "GUID:7e5a8252422bb7641b8e927de6adcf44",
+        "GUID:f440286408bd69a43a886ddb730d26de",
+        "GUID:f96e4854ab387ca429a35fd5ace44398"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,23 @@
+{
+    "name": "Ragnar.UI.Inventory",
+    "rootNamespace": "",
+    "references": [
+        "GUID:334d465b150f7504b9c018250d15ba0e",
+        "GUID:2395ab16e1401d442b46ac1a668a4444",
+        "GUID:7f692ba3ee53ce84d8587c88d7350c85",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:94ef6ffa177c3d74eb3f575c8def4c73",
+        "GUID:77320fecf8695fe4586c1c81152b3065",
+        "GUID:f96e4854ab387ca429a35fd5ace44398",
+        "GUID:110e42a67e02a414d8ee7870d441bda7"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
