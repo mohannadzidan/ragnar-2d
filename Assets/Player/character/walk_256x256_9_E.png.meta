@@ -3,8 +3,32 @@ guid: b5bb70bc2b85aec4d985594888962791
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2877471580529523173
-    second: 
+      213: -8757640516922059717
+    second: walk_256x256_9_E_0
+  - first:
+      213: 3010660237408270996
+    second: walk_256x256_9_E_1
+  - first:
+      213: 2347021475221904105
+    second: walk_256x256_9_E_2
+  - first:
+      213: 8263846017340417707
+    second: walk_256x256_9_E_3
+  - first:
+      213: 9115593366095839437
+    second: walk_256x256_9_E_4
+  - first:
+      213: -1332127050201769559
+    second: walk_256x256_9_E_5
+  - first:
+      213: -8001467644340851468
+    second: walk_256x256_9_E_6
+  - first:
+      213: -5662597886700913272
+    second: walk_256x256_9_E_7
+  - first:
+      213: 5422790962530735059
+    second: walk_256x256_9_E_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: b34da4e895c967680800000000000000
+      internalID: -8757640516922059717
       vertices: []
       indices: 
       edges: []
@@ -142,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 49afc16e88308c920800000000000000
+      internalID: 3010660237408270996
       vertices: []
       indices: 
       edges: []
@@ -163,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 9ea90deb89b429020800000000000000
+      internalID: 2347021475221904105
       vertices: []
       indices: 
       edges: []
@@ -184,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: ba62a164b241fa270800000000000000
+      internalID: 8263846017340417707
       vertices: []
       indices: 
       edges: []
@@ -205,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: dc0cc07bed7118e70800000000000000
+      internalID: 9115593366095839437
       vertices: []
       indices: 
       edges: []
@@ -226,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 9a9d8097185538de0800000000000000
+      internalID: -1332127050201769559
       vertices: []
       indices: 
       edges: []
@@ -247,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 4fc2841329315f090800000000000000
+      internalID: -8001467644340851468
       vertices: []
       indices: 
       edges: []
@@ -268,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 88d705949396a61b0800000000000000
+      internalID: -5662597886700913272
       vertices: []
       indices: 
       edges: []
@@ -289,8 +313,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 3d3d7d436af914b40800000000000000
+      internalID: 5422790962530735059
       vertices: []
       indices: 
       edges: []
@@ -306,15 +330,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk_256x256_9_E_4: 0
-      walk_256x256_9_E_3: 0
-      walk_256x256_9_E_5: 0
-      walk_256x256_9_E_6: 0
-      walk_256x256_9_E_2: 0
-      walk_256x256_9_E_0: 0
-      walk_256x256_9_E_1: 0
-      walk_256x256_9_E_7: 0
-      walk_256x256_9_E_8: 0
+      walk_256x256_9_E_4: 9115593366095839437
+      walk_256x256_9_E_3: 8263846017340417707
+      walk_256x256_9_E_5: -1332127050201769559
+      walk_256x256_9_E_6: -8001467644340851468
+      walk_256x256_9_E_2: 2347021475221904105
+      walk_256x256_9_E_0: -8757640516922059717
+      walk_256x256_9_E_1: 3010660237408270996
+      walk_256x256_9_E_7: -5662597886700913272
+      walk_256x256_9_E_8: 5422790962530735059
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -27,8 +27,17 @@ TextureImporter:
       213: 4929320852166093900
     second: attack_256x256_12_NE_7
   - first:
-      213: 2877471580529523173
-    second: 
+      213: 235073408992280604
+    second: attack_256x256_12_NE_8
+  - first:
+      213: -2778003261573027047
+    second: attack_256x256_12_NE_9
+  - first:
+      213: -9205186099635461406
+    second: attack_256x256_12_NE_10
+  - first:
+      213: -123112128736904049
+    second: attack_256x256_12_NE_11
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -292,8 +301,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5c02b5a9ba01f700800000000000000
-      internalID: 572250420117900382
+      spriteID: c4c2949c237786440800000000000000
+      internalID: 4929320852166093900
       vertices: []
       indices: 
       edges: []
@@ -313,8 +322,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: c10002f1506234300800000000000000
+      internalID: 235073408992280604
       vertices: []
       indices: 
       edges: []
@@ -334,8 +343,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 91b201980cc8279d0800000000000000
+      internalID: -2778003261573027047
       vertices: []
       indices: 
       edges: []
@@ -355,8 +364,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: 2e26dd7730c904080800000000000000
+      internalID: -9205186099635461406
       vertices: []
       indices: 
       edges: []
@@ -376,8 +385,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00000000000000000800000000000000
-      internalID: 0
+      spriteID: f8c3813db2e9a4ef0800000000000000
+      internalID: -123112128736904049
       vertices: []
       indices: 
       edges: []
@@ -394,11 +403,11 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       attack_256x256_12_NE_0: 572250420117900382
-      attack_256x256_12_NE_7: 572250420117900382
-      attack_256x256_12_NE_9: 0
-      attack_256x256_12_NE_10: 0
-      attack_256x256_12_NE_11: 0
-      attack_256x256_12_NE_8: 0
+      attack_256x256_12_NE_7: 4929320852166093900
+      attack_256x256_12_NE_9: -2778003261573027047
+      attack_256x256_12_NE_10: -9205186099635461406
+      attack_256x256_12_NE_11: -123112128736904049
+      attack_256x256_12_NE_8: 235073408992280604
       attack_256x256_12_NE_3: -6202143358136445689
       attack_256x256_12_NE_1: -5737531974919868022
       attack_256x256_12_NE_4: -3638119162267356624
