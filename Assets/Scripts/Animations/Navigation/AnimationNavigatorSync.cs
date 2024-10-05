@@ -20,17 +20,17 @@ public class AnimationNavigatorSync : MonoBehaviour
 
     void Update()
     {
+        var norm = navigator.direction.normalized;
+        Vector2 isometricDirection = new Vector2(norm.x, norm.y * 2f).normalized;
         navigator.active = isoAnim.IsMovementAnimation();
         if (navigator.reached)
         {
-            isoAnim.UpdateAnimator(navigator.direction * .25f);
+            isoAnim.UpdateAnimator(isometricDirection * .25f);
         }
         else
         {
-
-            isoAnim.UpdateAnimator((navigator.speed / navigator.moveSpeed) * navigator.direction);
+            isoAnim.UpdateAnimator((navigator.speed / navigator.moveSpeed) * isometricDirection);
         }
     }
-
 
 }
