@@ -27,6 +27,30 @@ public class SpriteToAnimation : EditorWindow
     int frameHeight = 256;
     // Create a Regex
     Regex animationFilenamePattern = new(@"^(\w+)_(\d+)x(\d+)_(\d+)_(N|S|W|E|NE|NW|SE|SW)$");
+
+
+    public struct IsoAnim
+    {
+        public readonly Vector2 direction;
+        public readonly string directionName;
+
+        public IsoAnim(Vector2 direction, string directionName)
+        {
+            this.direction = direction;
+            this.directionName = directionName;
+        }
+    }
+    public static readonly IsoAnim[] directions = {
+        new IsoAnim(new Vector2(1, 1).normalized, "W"),
+        new IsoAnim(new Vector2(-1, 1).normalized, "S"),
+        new IsoAnim(new Vector2(1, -1).normalized, "N"),
+        new IsoAnim(new Vector2(-1, -1).normalized, "E"),
+        new IsoAnim(new Vector2(1, 0).normalized, "NW"),
+        new IsoAnim(new Vector2(-1, 0).normalized, "SE"),
+        new IsoAnim(new Vector2(0, 1).normalized, "SW"),
+        new IsoAnim(new Vector2(0, -1).normalized, "NE"),
+    };
+
     public struct AutomaticAnimationSetupRecipe
     {
         public string animationName;
@@ -47,21 +71,6 @@ public class SpriteToAnimation : EditorWindow
         public bool valid;
     }
 
-
-    AnimationInfo ParseAnimationFilename(string animationFilename)
-    {
-        var result = animationFilenamePattern.Match(animationFilename);
-        if (!result.Success) return default;
-        return new()
-        {
-            valid = true,
-            animationName = result.Groups[1].Value,
-            frameWidth = int.Parse(result.Groups[2].Value),
-            frameHeight = int.Parse(result.Groups[3].Value),
-            frameCount = int.Parse(result.Groups[4].Value),
-            directionName = result.Groups[5].Value,
-        };
-    }
 
     AutomaticAnimationSetupRecipe[] automaticAnimationSetupRecipes = new AutomaticAnimationSetupRecipe[]{
         new(){
@@ -197,46 +206,42 @@ public class SpriteToAnimation : EditorWindow
         GUILayout.EndVertical();
     }
 
-
+    AnimationInfo ParseAnimationFilename(string animationFilename)
+    {
+        var result = animationFilenamePattern.Match(animationFilename);
+        if (!result.Success) return default;
+        return new()
+        {
+            valid = true,
+            animationName = result.Groups[1].Value,
+            frameWidth = int.Parse(result.Groups[2].Value),
+            frameHeight = int.Parse(result.Groups[3].Value),
+            frameCount = int.Parse(result.Groups[4].Value),
+            directionName = result.Groups[5].Value,
+        };
+    }
 
     BlendTree GetBlendTree(string name, bool destroyPrevious)
     {
         var rootStateMachine = animatorController.layers[0].stateMachine;
-        var state = rootStateMachine.states.FirstOrDefault(v => v.state.name == name).state;
-        if (!state)
+        var states = rootStateMachine.states;
+        var stateIndex = Array.FindIndex(states, v => v.state.name == name);
+        if (stateIndex < 0)
         {
-            state = rootStateMachine.AddState(name);
+            rootStateMachine.AddState(name);
+            stateIndex = rootStateMachine.states.Length - 1;
         }
-        if (destroyPrevious || state.motion is not BlendTree)
+        if (destroyPrevious || states[stateIndex].state.motion is not BlendTree)
         {
+            states[stateIndex].state.motion = new BlendTree()
+            {
+                name = name,
+            };
 
-            var tree = new BlendTree();
-            state.motion = tree;
+            AssetDatabase.AddObjectToAsset(states[stateIndex].state.motion, AssetDatabase.GetAssetPath(animatorController));
         }
-        return state.motion as BlendTree;
+        return states[stateIndex].state.motion as BlendTree;
     }
-
-    public struct IsoAnim
-    {
-        public readonly Vector2 direction;
-        public readonly string directionName;
-
-        public IsoAnim(Vector2 direction, string directionName)
-        {
-            this.direction = direction;
-            this.directionName = directionName;
-        }
-    }
-    public static readonly IsoAnim[] directions = {
-        new IsoAnim(new Vector2(1, 1).normalized, "W"),
-        new IsoAnim(new Vector2(-1, 1).normalized, "S"),
-        new IsoAnim(new Vector2(1, -1).normalized, "N"),
-        new IsoAnim(new Vector2(-1, -1).normalized, "E"),
-        new IsoAnim(new Vector2(1, 0).normalized, "NW"),
-        new IsoAnim(new Vector2(-1, 0).normalized, "SE"),
-        new IsoAnim(new Vector2(0, 1).normalized, "SW"),
-        new IsoAnim(new Vector2(0, -1).normalized, "NE"),
-    };
 
     void AddAnimationAllDirections(BlendTree tree, AnimationClip animation, string direction, float factor)
     {
@@ -275,7 +280,6 @@ public class SpriteToAnimation : EditorWindow
     private void SetupAnimations()
     {
         var controllerPath = AssetDatabase.GetAssetPath(animatorController);
-        var rootStateMachine = animatorController.layers[0].stateMachine;
         if (animatorController.parameters.FirstOrDefault(p => p.name == "Horizontal") == null)
         {
             animatorController.AddParameter("Horizontal", AnimatorControllerParameterType.Float);
@@ -296,7 +300,6 @@ public class SpriteToAnimation : EditorWindow
     {
         if (selectedAnimations == null) return;
         var controllerPath = AssetDatabase.GetAssetPath(animatorController);
-        var rootStateMachine = animatorController.layers[0].stateMachine;
         if (animatorController.parameters.FirstOrDefault(p => p.name == "Horizontal") == null)
         {
             animatorController.AddParameter("Horizontal", AnimatorControllerParameterType.Float);
@@ -404,7 +407,7 @@ public class SpriteToAnimation : EditorWindow
                 frameMeta.name = sourceImage.name + "_" + index;
                 frameMeta.rect = new Rect(x * frameWidth, y * frameHeight, frameWidth, frameHeight);
                 frameMeta.alignment = (int)SpriteAlignment.Custom;
-                frameMeta.pivot = pivot / new Vector2(frameWidth, frameHeight);
+                frameMeta.pivot = new Vector2(frameWidth, pivot.y / frameHeight);
                 spriteSheet[index] = frameMeta;
 
             }
